@@ -1,0 +1,5 @@
+export function Footer() {
+  return (
+    <footer className="border-t border-white/10 px-5 py-10 md:px-8"><div className="mx-auto flex max-w-7xl flex-col gap-7 md:flex-row md:items-center md:justify-between"><a href="#top" className="font-mono text-lg font-bold">HANNAN<span className="text-lime">.</span>DEV</a><div className="flex gap-6 font-mono text-[10px] uppercase tracking-widest text-white/45"><a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-lime">Github ↗</a><a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-lime">LinkedIn ↗</a><a href="mailto:hello@hannandev.com" className="hover:text-lime">Email ↗</a></div><div className="flex items-center justify-between gap-6 font-mono text-[10px] uppercase tracking-widest text-white/30"><span>© 2025 Hannan Dev</span><a href="#top" className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-white transition hover:border-lime hover:text-lime" aria-label="Back to top">↑</a></div></div></footer>
+  );
+}

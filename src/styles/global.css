@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --color-ink: #09050f;
+  --color-panel: #171022;
+  --color-lime: #ff4fd8;
+  --color-electric: #8b5cf6;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #09050f; color: #fff7fd; overflow-x: hidden; }
+::selection { background: #ff4fd8; color: #16051b; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #09050f; }
+::-webkit-scrollbar-thumb { background: #7c3aed; border-radius: 999px; }
+.grid-bg {
+  background-image: linear-gradient(rgba(255,79,216,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,.055) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.marquee { animation: marquee 24s linear infinite; }
+.float { animation: float 5s ease-in-out infinite; }
+.pulse-line { animation: pulse-line 2.2s ease-in-out infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes float { 50% { transform: translateY(-12px) rotate(2deg); } }
+@keyframes pulse-line { 50% { opacity: .35; transform: scaleX(.8); } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
